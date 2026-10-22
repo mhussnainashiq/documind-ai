@@ -35,37 +35,6 @@ No paid API keys or cloud database are required. The first embedding-model use d
 - 32 GB RAM is sufficient for this setup
 - Internet access for initial package/model downloads; app processing runs locally
 
-## Folder structure
-
-```text
-documind-ai/
-├── frontend/
-│   ├── src/
-│   │   ├── App.jsx
-│   │   ├── index.css
-│   │   └── main.jsx
-│   ├── .env.example
-│   ├── index.html
-│   └── package.json
-├── backend/
-│   ├── app/
-│   │   ├── services/
-│   │   │   ├── document_service.py
-│   │   │   ├── embedding_service.py
-│   │   │   └── rag_service.py
-│   │   ├── __init__.py
-│   │   ├── database.py
-│   │   ├── main.py
-│   │   ├── models.py
-│   │   └── schemas.py
-│   ├── tests/
-│   │   └── test_documents.py
-│   ├── .env.example
-│   └── requirements.txt
-├── .gitignore
-└── README.md
-```
-
 ## 1. Start the backend
 
 Open PowerShell:
@@ -88,9 +57,7 @@ Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 .\.venv\Scripts\Activate.ps1
 ```
 
-API: http://127.0.0.1:8000  
-Interactive API docs: http://127.0.0.1:8000/docs  
-Status: http://127.0.0.1:8000/api/status
+
 
 ## 2. Start the frontend
 
@@ -103,7 +70,7 @@ Copy-Item .env.example .env
 npm run dev
 ```
 
-Open the URL Vite prints, usually http://localhost:5173.
+
 
 ## 3. Enable generated RAG answers (Phase 3)
 
@@ -148,6 +115,3 @@ The test suite checks the health endpoint, text extraction, chunk splitting, uns
 
 This is a learning/freelance portfolio starter, not a hardened public SaaS deployment. It has no user authentication, per-user document access controls, antivirus scanning, encrypted database, OCR, rate limiting, or background job queue. Do not expose the development API to the public internet or upload sensitive client data until you implement those controls. LLM output can be inaccurate; verify answers against cited passages.
 
-## Roadmap after Phase 3
-
-Potential next steps: authentication and workspaces, OCR for scanned PDFs, background indexing jobs, document-level access control, conversation persistence, configurable models, evaluation tests for retrieval quality, and production deployment.
