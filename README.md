@@ -1,10 +1,10 @@
-# DocuMind AI — Full Project (Phases 1–3)
+# DocuMind AI — Full Project 
 
 DocuMind AI is a local-first document intelligence platform built with React + Vite + JavaScript, FastAPI, SQLAlchemy, SQLite, local embeddings, semantic search, and retrieval-augmented generation (RAG).
 
 ## Included phases
 
-### Phase 1 — Document workspace
+###  Document workspace
 - Responsive React dashboard
 - Upload PDF, DOCX, and TXT files (15 MB default maximum)
 - Extract text using PyMuPDF and python-docx
@@ -12,14 +12,14 @@ DocuMind AI is a local-first document intelligence platform built with React + V
 - Browse, search filenames, preview text, and delete documents
 - FastAPI health endpoint and API documentation
 
-### Phase 2 — Semantic search
+###  Semantic search
 - Split extracted text into overlapping chunks
 - Generate local embeddings using `sentence-transformers/all-MiniLM-L6-v2`
 - Save chunk text and embedding vectors in SQLite
 - Retrieve semantically similar chunks using cosine similarity
 - Search UI shows passages, source filename, chunk, and similarity score
 
-### Phase 3 — RAG chat with citations
+###  RAG chat with citations
 - Retrieve the most relevant document chunks for each question
 - Use a local Ollama model to generate a grounded answer with inline source markers
 - Show clickable source references in the chat UI
@@ -72,7 +72,7 @@ npm run dev
 
 
 
-## 3. Enable generated RAG answers (Phase 3)
+## 3. Enable generated RAG answers
 
 The app works without Ollama, but without a local LLM it shows relevant passages as a transparent fallback. To enable generated answers:
 
