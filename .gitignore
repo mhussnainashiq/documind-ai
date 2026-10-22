@@ -1,0 +1,39 @@
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Python virtual environments
+.venv/
+venv/
+env/
+
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Frontend dependencies and build output
+node_modules/
+dist/
+
+# Test and tool caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+
+# Logs and temporary files
+*.log
+.DS_Store
+Thumbs.db
+
+# Uploaded documents and private user data
+uploads/
+data/
+*.pdf
+*.docx
+*.doc
+*.xlsx
+*.xls
